@@ -83,6 +83,12 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//mat-select//span[text()='Test 2024']")
     private WebElement searchAcademicPeriod;
 
+    @FindBy(xpath="(//span[@class='mat-mdc-focus-indicator'])[12]")
+    private WebElement edit;
+
+    @FindBy(xpath="(//*[@class='mdc-switch__ripple']")
+    private WebElement active;
+
 
     public WebElement getWebElement(String strElement){
         switch (strElement){
@@ -98,6 +104,8 @@ public class DialogContent extends Parent{
             case "gradeLevel": return this.gradeLevel;
             case "gradeLevel2": return this.gradeLevel2;
             case "searchAcademicPeriod": return this.searchAcademicPeriod;
+            case "edit": return this.edit;
+            case "active": return this.active;
         }
 
         return null;
