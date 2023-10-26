@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -82,6 +83,71 @@ public class DialogContent extends Parent{
 
     @FindBy(xpath="//mat-select//span[text()='Test 2024']")
     private WebElement searchAcademicPeriod;
+    //--------------------------------------------
+
+    @FindBy(xpath="//input[@id='ms-text-field-2']")
+    public WebElement ibanBox;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @FindBy(xpath="(//span[@class='mat-mdc-button-touch-target'])[12]")
     public WebElement edit;
