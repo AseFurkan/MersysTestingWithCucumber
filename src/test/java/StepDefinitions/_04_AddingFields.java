@@ -6,11 +6,14 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.support.ui.Select;
 
-public class AddingFields {
-    DialogContent dc=new DialogContent();
-    LeftNav ln=new LeftNav();
+public class _04_AddingFields {
+    DialogContent dc = new DialogContent();
+    LeftNav ln = new LeftNav();
+    String name = "ASDF";
+    String code = "1020";
+    String nameUpdated = "asdf";
+
 
     @Given("Navigate to fields")
     public void navigateToFields() {
@@ -22,22 +25,26 @@ public class AddingFields {
     @When("Add a new field")
     public void addANewField() {
         dc.myClick(dc.addButton);
-        dc.mySendKeys(dc.nameInput,"mmyy");
-        dc.mySendKeys(dc.codeInput,"0202");
-        dc.myClick(dc.fieldType);
-        Select menu = new Select(dc.fieldTypes);
-        menu.selectByIndex(4);
+        dc.mySendKeys(dc.nameInput, name);
+        dc.mySendKeys(dc.codeInput, code);
+        dc.myClick(dc.saveButton);
     }
 
     @Then("Edit the field")
     public void editTheField() {
+        dc.myClick(dc.edit);
+        dc.mySendKeys(dc.nameInput, nameUpdated);
+        dc.myClick(dc.saveButton);
     }
 
     @And("Delete the field")
     public void deleteTheField() {
+        dc.deleteItem(nameUpdated);
     }
 
     @And("The field should be deleted successfully")
     public void theFieldShouldBeDeletedSuccessfully() {
+        dc.verifyContainsText(dc.successMessage,"success");
     }
+
 }

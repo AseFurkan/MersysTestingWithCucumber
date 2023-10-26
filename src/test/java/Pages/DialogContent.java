@@ -88,78 +88,13 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//input[@id='ms-text-field-2']")
     public WebElement ibanBox;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     @FindBy(xpath="(//span[@class='mat-mdc-button-touch-target'])[12]")
     public WebElement edit;
 
     @FindBy(xpath="(//*[@class='mdc-switch__ripple']")
     public WebElement active;
 
-    @FindBy(id="mat-select-4")
-    public WebElement fieldType;
 
-    @FindBy(xpath="//span[@class='mat-option-text']")
-    public WebElement fieldTypes;
 
 
     public WebElement getWebElement(String strElement){
