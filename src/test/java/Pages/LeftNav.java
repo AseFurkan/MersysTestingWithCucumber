@@ -47,6 +47,9 @@ public class LeftNav extends Parent{
     @FindBy(xpath="(//span[text()='Positions'])")
     public WebElement positions;
 
+    @FindBy(xpath="//span[text()='Fields']")
+    public WebElement fields;
+
     public WebElement getWebElement(String strElement){
         switch (strElement){
             case "setup": return this.setup;
