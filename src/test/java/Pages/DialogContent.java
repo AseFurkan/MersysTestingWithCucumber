@@ -95,8 +95,6 @@ public class DialogContent extends Parent{
     public WebElement active;
 
 
-
-
     public WebElement getWebElement(String strElement){
         switch (strElement){
             case "addButton": return this.addButton;

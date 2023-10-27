@@ -6,6 +6,8 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = {"src/test/java/FeatureFiles/_01_Login.feature"},
         glue = {"StepDefinitions"}
+
 )
-public class TestRunner extends AbstractTestNGCucumberTests {
+
+public class _01_RunLogin extends AbstractTestNGCucumberTests {
 }
