@@ -6,6 +6,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
 public class _05_PositionsSteps {
 
     DialogContent dc=new DialogContent();
@@ -25,11 +27,17 @@ public class _05_PositionsSteps {
         dc.nameInput.sendKeys("qaqac");
         dc.ShortName.sendKeys("wwww");
         dc.myClick(dc.saveButton);
+        dc.verifyContainsText(dc.successMessage, "success");
+
     }
 
     @When("Edit position")
     public void editPosition() {
         dc.myClick(dc.edit);
+        dc.nameInput.sendKeys("x");
+        dc.ShortName.sendKeys("c");
+        dc.myClick(dc.saveButton);
+        dc.verifyContainsText(dc.successMessage, "success");
         dc.nameInput.sendKeys("xxxx");
         dc.ShortName.sendKeys("cccc");
         dc.myClick(dc.saveButton);
@@ -38,6 +46,12 @@ public class _05_PositionsSteps {
 
     @Then("Delete position")
     public void deletePosition() {
+        dc.mySendKeys(dc.searchInput, "qaqacx");
+        dc.myClick(dc.searchButton);
+        dc.wait.until(ExpectedConditions.elementToBeClickable(dc.searchButton));
+        dc.myClick(dc.deleteImageBtn);
+        dc.myClick(dc.deleteDialogBtn);
+        dc.verifyContainsText(dc.successMessage, "success");
         dc.deleteItem("xxxx");
     }
 

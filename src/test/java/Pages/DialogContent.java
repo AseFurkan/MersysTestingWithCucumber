@@ -79,14 +79,17 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//mat-select//span[text()='Test 2024']")
     private WebElement searchAcademicPeriod;
 
+
     @FindBy(xpath="//input[@id='ms-text-field-2']")
     public WebElement ibanBox;
+
 
     @FindBy(xpath="(//span[@class='mat-mdc-button-touch-target'])[12]")
     public WebElement edit;
 
     @FindBy(xpath="(//*[@class='mdc-switch__ripple']")
     public WebElement active;
+
 
     @FindBy(xpath = "//*[text()='teamYedi']")
     public WebElement nameList;
