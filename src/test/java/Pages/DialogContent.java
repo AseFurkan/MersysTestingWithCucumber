@@ -2,16 +2,11 @@ package Pages;
 
 import Utilities.GWD;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
-import java.time.Duration;
 
 public class DialogContent extends Parent{
 
@@ -83,7 +78,6 @@ public class DialogContent extends Parent{
 
     @FindBy(xpath="//mat-select//span[text()='Test 2024']")
     private WebElement searchAcademicPeriod;
-    //--------------------------------------------
 
     @FindBy(xpath="//input[@id='ms-text-field-2']")
     public WebElement ibanBox;
@@ -93,6 +87,11 @@ public class DialogContent extends Parent{
 
     @FindBy(xpath="(//*[@class='mdc-switch__ripple']")
     public WebElement active;
+
+    @FindBy(xpath = "//*[text()='teamYedi']")
+    public WebElement nameList;
+    @FindBy(xpath = "//ms-edit-button/button")
+    public WebElement editBtn;
 
 
 
@@ -111,6 +110,11 @@ public class DialogContent extends Parent{
             case "gradeLevel": return this.gradeLevel;
             case "gradeLevel2": return this.gradeLevel2;
             case "searchAcademicPeriod": return this.searchAcademicPeriod;
+            case "searchButton": return this.searchButton;
+            case "nameList": return this.nameList;
+            case "editBtn": return this.editBtn;
+
+
         }
 
         return null;
