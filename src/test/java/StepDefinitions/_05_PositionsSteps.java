@@ -5,6 +5,7 @@ import Pages.LeftNav;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class _05_PositionsSteps {
@@ -27,6 +28,7 @@ public class _05_PositionsSteps {
         dc.ShortName.sendKeys("wwww");
         dc.myClick(dc.saveButton);
         dc.verifyContainsText(dc.successMessage, "success");
+
     }
 
     @When("Edit position")
@@ -36,6 +38,9 @@ public class _05_PositionsSteps {
         dc.ShortName.sendKeys("c");
         dc.myClick(dc.saveButton);
         dc.verifyContainsText(dc.successMessage, "success");
+        dc.nameInput.sendKeys("xxxx");
+        dc.ShortName.sendKeys("cccc");
+        dc.myClick(dc.saveButton);
 
     }
 
@@ -47,6 +52,7 @@ public class _05_PositionsSteps {
         dc.myClick(dc.deleteImageBtn);
         dc.myClick(dc.deleteDialogBtn);
         dc.verifyContainsText(dc.successMessage, "success");
+        dc.deleteItem("xxxx");
     }
 
     @Then("Active and non active positions")
