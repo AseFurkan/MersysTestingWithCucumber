@@ -4,8 +4,10 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-        features = {"src/test/java/FeatureFiles/_01_Login.feature"},
+        features = {"src/test/java/FeatureFiles/_00_Login.feature"},
         glue = {"StepDefinitions"}
+
 )
-public class TestRunner extends AbstractTestNGCucumberTests {
+
+public class _00_RunLogin extends AbstractTestNGCucumberTests {
 }
