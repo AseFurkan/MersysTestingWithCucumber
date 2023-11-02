@@ -49,7 +49,7 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//ms-search-button//button")
     public WebElement searchButton;
 
-    @FindBy(xpath="(//ms-delete-button//button)[1]")
+    @FindBy(xpath="//ms-delete-button//button[1]")
     public WebElement deleteImageBtn;
 
     @FindBy(xpath="//button[@type='submit']")
