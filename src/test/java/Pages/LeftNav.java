@@ -38,6 +38,7 @@ public class LeftNav extends Parent{
     @FindBy(xpath="(//span[text()='Entrance Exams'])[2]")
     private WebElement entranceExamsTwo;
 
+
     @FindBy (xpath = "//span[text()='Education']")
     public WebElement education;
 
@@ -46,6 +47,26 @@ public class LeftNav extends Parent{
 
     @FindBy (xpath = "//span[text()='Subject Categories']")
     public WebElement subjectcat;
+  
+    @FindBy(xpath="(//span[text()='Human Resources'])")
+    public WebElement humanResources;
+
+    @FindBy(xpath="(//span[text()='Setup'])[3]")
+    public WebElement setupTree;
+
+    @FindBy(xpath="(//span[text()='Positions'])")
+    public WebElement positions;
+
+
+    @FindBy(xpath="//span[text()='Fields']")
+    public WebElement fields;
+
+    @FindBy(xpath = "//span[text()='Departments']")
+    public WebElement departments;
+    @FindBy(xpath = "//span[text()='School Setup']")
+    public WebElement schoolSetup;
+
+
 
     public WebElement getWebElement(String strElement){
         switch (strElement){
@@ -57,10 +78,20 @@ public class LeftNav extends Parent{
             case "fees": return this.fees;
             case "entranceExamsOne": return this.entranceExamsOne;
             case "setupTwo": return this.setupTwo;
+            case "departments": return this.departments;
             case "entranceExamsTwo": return this.entranceExamsTwo;
+
             case "education" : return this.education;
             case "setupedu" : return this.setupedu;
             case "subjectcat" : return this.subjectcat;
+
+
+            case "schoolSetup": return this.schoolSetup;
+
+
+
+
+
         }
 
         return null;

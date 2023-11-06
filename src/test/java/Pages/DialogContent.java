@@ -2,15 +2,11 @@ package Pages;
 
 import Utilities.GWD;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
-import java.time.Duration;
 
 public class DialogContent extends Parent{
 
@@ -91,6 +87,25 @@ public class DialogContent extends Parent{
 
 
 
+    @FindBy(xpath="//input[@id='ms-text-field-2']")
+    public WebElement ibanBox;
+
+
+    @FindBy(xpath="(//span[@class='mat-mdc-button-touch-target'])[12]")
+    public WebElement edit;
+
+    @FindBy(xpath="(//*[@class='mdc-switch__ripple']")
+    public WebElement active;
+
+
+    @FindBy(xpath = "//*[text()='teamYedi']")
+    public WebElement nameList;
+    @FindBy(xpath = "//ms-edit-button/button")
+    public WebElement editBtn;
+
+
+
+
     public WebElement getWebElement(String strElement){
         switch (strElement){
             case "addButton": return this.addButton;
@@ -105,8 +120,14 @@ public class DialogContent extends Parent{
             case "gradeLevel": return this.gradeLevel;
             case "gradeLevel2": return this.gradeLevel2;
             case "searchAcademicPeriod": return this.searchAcademicPeriod;
+
             case "editbutton" : return this.editbutton;
             case "activebutton":return this.activebutton;
+
+            case "searchButton": return this.searchButton;
+            case "nameList": return this.nameList;
+            case "editBtn": return this.editBtn;
+
 
         }
 
