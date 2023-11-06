@@ -79,6 +79,13 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//mat-select//span[text()='Test 2024']")
     private WebElement searchAcademicPeriod;
 
+    @FindBy(xpath = "//button[@class='mat-mdc-tooltip-trigger mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base ng-star-inserted']")
+    public WebElement editbutton;
+
+    @FindBy(xpath = "(//button[@role='switch'])[2]")
+    public WebElement activebutton;
+
+
 
     @FindBy(xpath="//input[@id='ms-text-field-2']")
     public WebElement ibanBox;
@@ -113,6 +120,10 @@ public class DialogContent extends Parent{
             case "gradeLevel": return this.gradeLevel;
             case "gradeLevel2": return this.gradeLevel2;
             case "searchAcademicPeriod": return this.searchAcademicPeriod;
+
+            case "editbutton" : return this.editbutton;
+            case "activebutton":return this.activebutton;
+
             case "searchButton": return this.searchButton;
             case "nameList": return this.nameList;
             case "editBtn": return this.editBtn;
