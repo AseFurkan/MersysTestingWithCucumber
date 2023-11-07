@@ -17,6 +17,10 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "//span[text()='Parameters']")
     public WebElement parameters;
 
+    @FindBy(xpath = "(//span[text()='Bank Accounts'])[1]")
+    public WebElement bankAccounts;
+
+
     @FindBy(xpath = "(//span[text()='Countries'])[1]")
     public WebElement countries;
 
@@ -47,8 +51,49 @@ public class LeftNav extends Parent{
     @FindBy(xpath="(//span[text()='Positions'])")
     public WebElement positions;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @FindBy(xpath="//span[text()='Fields']")
     public WebElement fields;
+
+
 
     public WebElement getWebElement(String strElement){
         switch (strElement){
@@ -61,13 +106,51 @@ public class LeftNav extends Parent{
             case "entranceExamsOne": return this.entranceExamsOne;
             case "setupTwo": return this.setupTwo;
             case "entranceExamsTwo": return this.entranceExamsTwo;
+            case "bankAccounts": return this.bankAccounts;
+            case "gradeLevels": return this.gradeLevels;
 
 
 
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         return null;
     }
+
+    @FindBy(xpath = "//span[text()='Grade Levels']")
+    public WebElement gradeLevels;
+
+
+
 
 
 
