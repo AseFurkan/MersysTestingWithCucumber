@@ -11,6 +11,6 @@ Feature: Adding new fields
 
     Given Navigate to fields
     When Add a new field
-#    Then Edit the field
-#    And Delete the field
-#    And The field should be deleted successfully
+    Then Edit the field
+    And Delete the field
+    And The field should be deleted successfully

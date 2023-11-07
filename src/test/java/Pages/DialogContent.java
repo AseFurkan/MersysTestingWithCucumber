@@ -2,16 +2,11 @@ package Pages;
 
 import Utilities.GWD;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
-import java.time.Duration;
 
 public class DialogContent extends Parent{
 
@@ -54,7 +49,7 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//ms-search-button//button")
     public WebElement searchButton;
 
-    @FindBy(xpath="(//ms-delete-button//button)[1]")
+    @FindBy(xpath="//ms-delete-button//button[1]")
     public WebElement deleteImageBtn;
 
     @FindBy(xpath="//button[@type='submit']")
@@ -84,127 +79,38 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//mat-select//span[text()='Test 2024']")
     private WebElement searchAcademicPeriod;
 
+
     @FindBy(xpath="//input[@id='ms-text-field-2']")
     public WebElement ibanBox;
 
     @FindBy(xpath="(//span[@class='mat-mdc-button-touch-target'])[12]")
     public WebElement edit;
 
+    @FindBy(xpath = "//button[@class='mat-mdc-tooltip-trigger mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base ng-star-inserted']")
+    public WebElement editbutton;
+
+    @FindBy(xpath = "(//button[@role='switch'])[2]")
+    public WebElement activebutton;
 
 
 
+    @FindBy(xpath="//input[@id='ms-text-field-2']")
+    public WebElement ibanBox;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath="(//span[@class='mat-mdc-button-touch-target'])[12]")
+    public WebElement edit;
 
     @FindBy(xpath="(//*[@class='mdc-switch__ripple']")
     public WebElement active;
 
-    @FindBy(id="mat-select-4")
-    public WebElement fieldType;
 
-    @FindBy(xpath="//span[@class='mat-option-text']")
-    public WebElement fieldTypes;
-
-
-
-    public WebElement getWebElement(String strElement){
-        switch (strElement){
-            case "addButton": return this.addButton;
-            case "saveButton": return this.saveButton;
-            case "nameInput": return this.nameInput;
-            case "codeInput": return this.codeInput;
-            case "integrationCode": return this.integrationCode;
-            case "priorityCode": return this.priorityCode;
-            case "toggleBar": return this.toggleBar;
-            case "academicPeriod": return this.academicPeriod;
-            case "academicPeriod1": return this.academicPeriod1;
-            case "gradeLevel": return this.gradeLevel;
-            case "gradeLevel2": return this.gradeLevel2;
-            case "searchAcademicPeriod": return this.searchAcademicPeriod;
-            case "ibanBox": return this.ibanBox;
-            case "currency": return this.currency;
-            case "currency1": return this.currency1;
-            case "searchNameInput": return this.searchNameInput;
-            case "deleteBtn": return this.deleteBtn;
-            case "actionDeleteBtn": return this.actionDeleteBtn;
-            case "lastEdit": return this.lastEdit;
-            case "deletelast": return this.deletelast;
-            case "order": return this.order;
-        }
-
-        return null;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//*****************************************
-    @FindBy (css = "ms-dialog-content mat-select")
+    @FindBy(xpath = "//*[text()='teamYedi']")
+    public WebElement nameList;
+    @FindBy(xpath = "//ms-edit-button/button")
+    public WebElement editBtn;
+  
+      @FindBy (css = "ms-dialog-content mat-select")
     public WebElement currency;
 
     @FindBy (xpath = "//mat-option/span")
@@ -236,6 +142,51 @@ public class DialogContent extends Parent{
 
     @FindBy (css = "ms-text-field input[data-placeholder='Order']")
     public WebElement order;
+
+
+
+
+
+    public WebElement getWebElement(String strElement){
+        switch (strElement){
+            case "addButton": return this.addButton;
+            case "saveButton": return this.saveButton;
+            case "nameInput": return this.nameInput;
+            case "codeInput": return this.codeInput;
+            case "integrationCode": return this.integrationCode;
+            case "priorityCode": return this.priorityCode;
+            case "toggleBar": return this.toggleBar;
+            case "academicPeriod": return this.academicPeriod;
+            case "academicPeriod1": return this.academicPeriod1;
+            case "gradeLevel": return this.gradeLevel;
+            case "gradeLevel2": return this.gradeLevel2;
+            case "searchAcademicPeriod": return this.searchAcademicPeriod;
+
+            case "ibanBox": return this.ibanBox;
+            case "currency": return this.currency;
+            case "currency1": return this.currency1;
+            case "searchNameInput": return this.searchNameInput;
+            case "deleteBtn": return this.deleteBtn;
+            case "actionDeleteBtn": return this.actionDeleteBtn;
+            case "lastEdit": return this.lastEdit;
+            case "deletelast": return this.deletelast;
+            case "order": return this.order;
+
+
+            case "editbutton" : return this.editbutton;
+            case "activebutton":return this.activebutton;
+
+            case "searchButton": return this.searchButton;
+            case "nameList": return this.nameList;
+            case "editBtn": return this.editBtn;
+
+
+        }
+
+        return null;
+    }
+
+
 
 
 

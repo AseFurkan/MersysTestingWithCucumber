@@ -42,6 +42,16 @@ public class LeftNav extends Parent{
     @FindBy(xpath="(//span[text()='Entrance Exams'])[2]")
     private WebElement entranceExamsTwo;
 
+
+    @FindBy (xpath = "//span[text()='Education']")
+    public WebElement education;
+
+    @FindBy (xpath = "(//span[text()='Setup'])[5]")
+    public WebElement setupedu;
+
+    @FindBy (xpath = "//span[text()='Subject Categories']")
+    public WebElement subjectcat;
+  
     @FindBy(xpath="(//span[text()='Human Resources'])")
     public WebElement humanResources;
 
@@ -51,48 +61,20 @@ public class LeftNav extends Parent{
     @FindBy(xpath="(//span[text()='Positions'])")
     public WebElement positions;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath="//span[text()='Fields']")
+    public WebElement fields;
 
     @FindBy(xpath="//span[text()='Fields']")
     public WebElement fields;
 
+    @FindBy(xpath = "//span[text()='Departments']")
+    public WebElement departments;
+  
+    @FindBy(xpath = "//span[text()='School Setup']")
+    public WebElement schoolSetup;
+  
+  @FindBy(xpath = "//span[text()='Grade Levels']")
+    public WebElement gradeLevels;
 
 
     public WebElement getWebElement(String strElement){
@@ -105,53 +87,20 @@ public class LeftNav extends Parent{
             case "fees": return this.fees;
             case "entranceExamsOne": return this.entranceExamsOne;
             case "setupTwo": return this.setupTwo;
+            case "departments": return this.departments;
             case "entranceExamsTwo": return this.entranceExamsTwo;
             case "bankAccounts": return this.bankAccounts;
             case "gradeLevels": return this.gradeLevels;
 
+            case "education" : return this.education;
+            case "setupedu" : return this.setupedu;
+            case "subjectcat" : return this.subjectcat;
 
+
+            case "schoolSetup": return this.schoolSetup;
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         return null;
     }
-
-    @FindBy(xpath = "//span[text()='Grade Levels']")
-    public WebElement gradeLevels;
-
-
-
-
-
-
 }
