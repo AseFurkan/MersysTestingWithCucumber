@@ -34,7 +34,7 @@ public class DialogContent extends Parent{
     public WebElement codeInput;
     @FindBy(xpath="//ms-save-button/button")
     public WebElement saveButton;
-    @FindBy(xpath="//div[contains(text(),'successfully')]")
+    @FindBy(xpath="//div[contains(text(),'success')]")
     public WebElement successMessage;
 
     @FindBy(xpath ="//ms-text-field[@formcontrolname='shortName']//input" )
@@ -55,8 +55,8 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//button[@type='submit']")
     public WebElement deleteDialogBtn;
 
-    @FindBy(xpath="//ms-text-field[@formcontrolname='budgetAccountIntegrationCode']//input")
-    private WebElement integrationCode;
+    @FindBy(css =" ms-dialog-content input[data-placeholder='Integration Code']")
+    public WebElement integrationCode;
 
     @FindBy(xpath="//ms-integer-field[@formcontrolname='priority']/input")
     private WebElement priorityCode;
@@ -78,6 +78,13 @@ public class DialogContent extends Parent{
 
     @FindBy(xpath="//mat-select//span[text()='Test 2024']")
     private WebElement searchAcademicPeriod;
+
+
+    @FindBy(xpath="//input[@id='ms-text-field-2']")
+    public WebElement ibanBox;
+
+    @FindBy(xpath="(//span[@class='mat-mdc-button-touch-target'])[12]")
+    public WebElement edit;
 
     @FindBy(xpath = "//button[@class='mat-mdc-tooltip-trigger mdc-icon-button mat-mdc-icon-button mat-accent mat-mdc-button-base ng-star-inserted']")
     public WebElement editbutton;
@@ -102,6 +109,40 @@ public class DialogContent extends Parent{
     public WebElement nameList;
     @FindBy(xpath = "//ms-edit-button/button")
     public WebElement editBtn;
+  
+      @FindBy (css = "ms-dialog-content mat-select")
+    public WebElement currency;
+
+    @FindBy (xpath = "//mat-option/span")
+    public WebElement currency1;
+
+
+
+    @FindBy(xpath="//input[@data-placeholder='Name']")
+    public WebElement name;
+
+
+    @FindBy(xpath="//ms-edit-button[@class='ng-star-inserted']")
+    public WebElement edit2;
+
+    @FindBy(css = "input[data-placeholder='Name']")
+    public WebElement searchNameInput;
+
+    @FindBy(css = "ms-delete-button")
+    public WebElement deleteBtn;
+
+    @FindBy(css = "button[type='submit']")
+    public WebElement actionDeleteBtn;
+
+    @FindBy(css = "table tr:last-child ms-edit-button button")
+    public WebElement lastEdit;
+
+    @FindBy(css = "table tr:last-child ms-delete-button")
+    public WebElement deletelast;
+
+    @FindBy (css = "ms-text-field input[data-placeholder='Order']")
+    public WebElement order;
+
 
 
 
@@ -121,6 +162,17 @@ public class DialogContent extends Parent{
             case "gradeLevel2": return this.gradeLevel2;
             case "searchAcademicPeriod": return this.searchAcademicPeriod;
 
+            case "ibanBox": return this.ibanBox;
+            case "currency": return this.currency;
+            case "currency1": return this.currency1;
+            case "searchNameInput": return this.searchNameInput;
+            case "deleteBtn": return this.deleteBtn;
+            case "actionDeleteBtn": return this.actionDeleteBtn;
+            case "lastEdit": return this.lastEdit;
+            case "deletelast": return this.deletelast;
+            case "order": return this.order;
+
+
             case "editbutton" : return this.editbutton;
             case "activebutton":return this.activebutton;
 
@@ -133,6 +185,9 @@ public class DialogContent extends Parent{
 
         return null;
     }
+
+
+
 
 
     public void deleteItem(String searchText){

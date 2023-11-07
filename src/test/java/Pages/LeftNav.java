@@ -17,6 +17,10 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "//span[text()='Parameters']")
     public WebElement parameters;
 
+    @FindBy(xpath = "(//span[text()='Bank Accounts'])[1]")
+    public WebElement bankAccounts;
+
+
     @FindBy(xpath = "(//span[text()='Countries'])[1]")
     public WebElement countries;
 
@@ -57,15 +61,20 @@ public class LeftNav extends Parent{
     @FindBy(xpath="(//span[text()='Positions'])")
     public WebElement positions;
 
+    @FindBy(xpath="//span[text()='Fields']")
+    public WebElement fields;
 
     @FindBy(xpath="//span[text()='Fields']")
     public WebElement fields;
 
     @FindBy(xpath = "//span[text()='Departments']")
     public WebElement departments;
+  
     @FindBy(xpath = "//span[text()='School Setup']")
     public WebElement schoolSetup;
-
+  
+  @FindBy(xpath = "//span[text()='Grade Levels']")
+    public WebElement gradeLevels;
 
 
     public WebElement getWebElement(String strElement){
@@ -80,6 +89,8 @@ public class LeftNav extends Parent{
             case "setupTwo": return this.setupTwo;
             case "departments": return this.departments;
             case "entranceExamsTwo": return this.entranceExamsTwo;
+            case "bankAccounts": return this.bankAccounts;
+            case "gradeLevels": return this.gradeLevels;
 
             case "education" : return this.education;
             case "setupedu" : return this.setupedu;
@@ -88,15 +99,8 @@ public class LeftNav extends Parent{
 
             case "schoolSetup": return this.schoolSetup;
 
-
-
-
-
         }
 
         return null;
     }
-
-
-
 }
